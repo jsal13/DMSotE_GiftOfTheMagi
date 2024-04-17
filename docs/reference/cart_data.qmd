@@ -1,0 +1,63 @@
+# Cartrige and Emulation Binary Data
+
+This data was distilled from [nescartdb](https://nescartdb.com/profile/view/1100/wizardry-proving-grounds-of-the-mad-overlord), an excellent cart resource.  
+
+**Note**: I'm unsure what parts of this will be useful.  We'll see.
+
+
+## Cart Details
+
+- Released in USA in 1990 (in Japan in 1989).
+
+### ROM
+
+- PRG0 (NES-09-0 PRG) 128 KB
+- CHR0 (NES-09-O CHR) 128 KB
+
+### Circuit Board
+
+This may be less important but useful for searching.
+
+- NES-SKROM-04 (Nintendo Produced, Nov 1990 First Run).
+- iNES Mapper: 1  (???)
+- Mirroring: Mapper Ctrl
+- Battery: Yes
+- WRAM: 8 KB
+- VRAM: 0 KB
+
+
+### Chip Info
+
+- U1 PRG (NEC) Mask ROM 128 KB (200 ns)
+- U2 CHR (NEC) Mask ROM 128 KB (200 ns)
+- U3 CIC
+- U4 MMC1 (NEC) MMC1B2
+
+## Emulation Binary
+
+The binary file we will be using is `Dungeon Magic - Sword of the Elements (USA).nes` and has the following checksums (use the actual path instead of `/location/of/rom.nes` when using the commands):
+
+```shell
+> chsum /location/of/rom.nes
+607095725 262160
+
+# MD5 Checksum.
+> md5sum /location/of/rom.nes
+90c6e21b079795f5c9905142f34c56b6
+
+> sha1sum /location/of/rom.nes
+0f8e5f97e23f1209f08cbd27c1c58ea585f0c3b1
+```
+Note that we _cannot help you find this ROM_, but searching for the name would be a good start.
+
+```text
+4E 45 53 1A 08 10 12 08 00 00 70 00 00 00 00 01
+```
+Corresponding to the following:
+
+Byte|Description
+--|--
+00| Constant $4E ("N")
+01|  Constant $45 ("E")
+02|  Constant $53 ("S")
+03|  Constant 

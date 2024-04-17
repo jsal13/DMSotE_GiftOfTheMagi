@@ -3,11 +3,8 @@ set shell := ["zsh", "-cu"]
 default:
   just --list
 
-docs-serve:
-  mkdocs serve
-
-docs-build:
-  mkdocs build
+docs:
+  quarto render docs
 
 venv: 
   python -m venv .venv

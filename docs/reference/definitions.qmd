@@ -1,0 +1,76 @@
+# General Definitions
+
+See also the glossery [here](https://www.nesdev.org/wiki/Glossary).  Most quoted material below is from this page.  These will be the most relevant items for this project.
+
+## NES Circuitry & Sundry
+
+- **Game Pak**: 
+  - A Nintendo cartridge (including all the circuits and stuff).
+
+- **ASIC**: 
+  - "Application specific integrated circuit. Used with mappers involving complicated logic that the IC chip is made specific to this purpose."
+
+- **MMC1**: 
+  - "Name for ASIC mappers made by Nintendo."
+
+## ROMs
+
+- **ROM**: 
+  - Read-Only Memory.  Can only be read, not written to.
+
+- **PRG ROM**: 
+  - Typically contains the game's "programming".  
+  - The number following the acronym is the release number, starting with 0.
+  - "ROM on the CPU's bus, containing a program to be executed and data for the program to use. In games using CHR RAM, it may also contain data to be copied to CHR RAM."
+
+- **CHR ROM** ("Character" ROM?)
+  - ROM which contains the graphics and visual assets (sprites, backgrounds, etc.).  
+  - The number following the acronym is the release number, starting with 0.
+  - "ROM in the cartridge which is connected to the PPU, normally mapped at $0000-$1FFF and holding pattern tables."
+
+## RAMs
+
+- **RAM**: 
+  - Random Access Memory.  Can be read or written to.
+
+- **RPG RAM**: 
+  - Typically contains the game's "programming".  
+  - The number following the acronym is the release number, starting with 0.
+  - "RAM in the cartridge on the CPU bus, in contrast to the internal RAM at $0000-$07FF which is usually called main RAM, system RAM, or just RAM."
+
+- **CHR RAM** ("Character" RAM?):
+  - RAM which contains the graphics and visual assets (sprites, backgrounds, etc.).  
+  - The number following the acronym is the release number, starting with 0."
+  - "An SRAM on the cartridge, usually 8192 bytes, normally mapped at $0000-$1FFF and holding pattern tables."
+
+- **SRAM**: 
+  - "[Static Ram](https://en.wikipedia.org/wiki/Static_random-access_memory)".  
+  - RAM type that uses "latching circuitry" to store each bit.  When the power is removed from the RAM, the data is lost.  
+  - [Some more details at this post.](https://forums.nesdev.org/viewtopic.php?t=3334)
+
+- **WRAM**: 
+  - ("Work RAM")  Typically PRG RAM used for (???).
+
+- **VRAM**: 
+  - Video RAM (pattern tables, nametables, attribute tables, palettes).
+
+## Memory Mapping and Mirroring
+
+- **Mapper**: 
+  - Circuits on the Game Pak to perform address decoding and couting.  
+   
+- **iNES Mapper**:
+  - ????
+- **Mirroring**: 
+  - "Presence of one memory area at more than one place in the memory map." 
+  - "In the PPU memory, mirroring is used in the nametables to repeat the screen horizontally or vertically, thus the distinguishing terms "horizontal mirroring" and "vertical mirroring" are used."
+
+## Emulation
+
+- **iNES Format**: 
+  - "The de facto standard for distribution of NES binary programs."
+  - "The format was later extended with NES 2.0 to fix the shortcomings of iNES."
+  - See [this page for details](https://www.nesdev.org/wiki/INES). 
+- **NES 2.0 Format**: 
+  - The format which improved upon the iNES Format.
+  - See [this page for details](https://www.nesdev.org/wiki/NES_2.0).

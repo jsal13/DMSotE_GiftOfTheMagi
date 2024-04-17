@@ -23,6 +23,7 @@ website:
         contents:
           - ./reference/definitions.qmd
           - ./reference/cart_data.qmd
+          - ./reference/utilities_and_resources.qmd
 
 format:
   html:
@@ -31,8 +32,11 @@ format:
     fontsize: 12pt
     css: styles.css
     toc: true
-
-
+    code-fold: true  # This doesn't seem to work... :'[ 
+    code-summary: "Show Code"
+    code-block-border-left: "#18bc9c"
+    highlight-style: kate
+    code-line-numbers: true
 
 
     

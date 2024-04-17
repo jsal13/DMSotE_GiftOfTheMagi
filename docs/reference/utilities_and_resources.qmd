@@ -1,0 +1,5 @@
+# Utilities and Resources
+
+## NES Binary File Utils / Resources
+- [NESDev's NES 2.0 File Structure Description](https://www.nesdev.org/wiki/NES_2.0#File_Structure): The definitive place to find information about the NES 2.0 format.
+- [NESSplitter](https://www.romhacking.net/utilities/1805/): Splits a ROM into PNG and CHR ROM segments.

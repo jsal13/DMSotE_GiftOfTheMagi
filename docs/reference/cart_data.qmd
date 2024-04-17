@@ -92,7 +92,8 @@ Corresponding to the following (with much more information [here](https://www.ne
 
 Some things to take away from this:
 
-- **QUESTION?** I'm not sure how to read 04, 05, 09** together.  I think it's something like: there's \$0x0008 and \$0x0010 KiBs for PRG and CHR respectively, but I'm not sure.  That doesn't quite make sense.  Even assuming it's 16 times that number, it's pretty low but that might be it.
+- **QUESTION?** I'm not sure how to read 04, 05, 09** together.  I think this means we have to go to Adress 00000400 to see the end of the PRG, since it's 16KiB * 8 = 128KiB = 131,072 bytes.
+
   
 - Note the address \$06 above.  Check this flag out here[here](https://www.nesdev.org/wiki/NES_2.0#File_Structure), which we reproduce below for convenience.  The binary is $00010010$ which gives us: "Mapper Number D0" (**QUESTION: WHAT IS THIS**) and "Battery" present.  Indeed, there was a battery with this game.
   
@@ -118,6 +119,7 @@ D~7654 3210
 ```
 
 - Similarly, for \$07, we have the binary value $00001010$.  The flag map is reproduced below from the same resource as above.  Given this, we know that the console was the NES (as expected) and that, indeed, this is an NES 2.0 Heading.  This is how we knew the game was in the NES 2.0 Format.
+- Remember the 512-byte trainer is _not present_.  We will need this soon.
 
 ```text
 # FLAG $07
@@ -135,5 +137,17 @@ D~7654 3210
 ```
 
 - The other values may come up later but, for now, this seems reasonable and gives us enough to be confident about diving into the cart.
+
+
+```
+<prgrom size="131072" crc32="4EBDB122" sha1="04EA802E3E41584ED1177482FD9E9D7560EB5BD2" sum16="E2B2" />
+<chrrom size="131072" crc32="D0F69B41" sha1="B55180760FC4D1F29977CAA5F2897DD497C0E2D3" sum16="EC5C" />
+<rom size="262144" crc32="23C3FB2D" sha1="46CC4F6A0271828567419602CE19AB87F46062A5" />
+<prgnvram size="8192" />
+<pcb mapper="1" submapper="0" mirroring="H" battery="1" />
+<console type="0" region="0" />
+<expansion type="1" />
+```
+
 
 [^1]: [SUB as MS-DOS End of File](https://en.wikipedia.org/wiki/Substitute_character#End_of_file).

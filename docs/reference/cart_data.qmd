@@ -1,9 +1,8 @@
-# Cartrige and Emulation Binary Data
+# Cartridge and Emulation Binary Data
 
 This data was distilled from [nescartdb](https://nescartdb.com/profile/view/1100/wizardry-proving-grounds-of-the-mad-overlord), an excellent cart resource.  
 
 **Note**: I'm unsure what parts of this will be useful.  We'll see.
-
 
 ## Cart Details
 
@@ -18,7 +17,7 @@ This data was distilled from [nescartdb](https://nescartdb.com/profile/view/1100
 
 This may be less important but useful for searching.
 
-- NES-SKROM-04 (Nintendo Produced, Nov 1990 First Run).
+- NES-SKROM-04 (Nintendo Produced, November 1990 First Run).
 - iNES Mapper: 1  (???)
 - Mirroring: Mapper Ctrl
 - Battery: Yes
@@ -35,29 +34,106 @@ This may be less important but useful for searching.
 
 ## Emulation Binary
 
-The binary file we will be using is `Dungeon Magic - Sword of the Elements (USA).nes` and has the following checksums (use the actual path instead of `/location/of/rom.nes` when using the commands):
+### The .NES Binary File
+
+The file we will be using is `Dungeon Magic - Sword of the Elements (USA).nes`.  **Going forward, we will refer to this file as the "ROM".**  
+
+To check that the file is correct, run the following checksum calculation commands in terminal (using the actual path instead of `/location/of/rom.nes` when using the commands):
 
 ```shell
-> chsum /location/of/rom.nes
-607095725 262160
-
 # MD5 Checksum.
 > md5sum /location/of/rom.nes
 90c6e21b079795f5c9905142f34c56b6
 
+# SHA1 Checksum.
 > sha1sum /location/of/rom.nes
 0f8e5f97e23f1209f08cbd27c1c58ea585f0c3b1
+
+# CRC32 Checksum.  
+# On Debian, may need to be installed.
+> crc32 /location/of/rom.nes
+1fedecae
 ```
-Note that we _cannot help you find this ROM_, but searching for the name would be a good start.
+
+(Note that _we cannot help you find this ROM_, but searching for the exact name above could be a good start.)
+
+## The ROM Header
+
+The ROM header will let us see what kind of file format this is ([iNES](https://www.nesdev.org/wiki/INES#iNES_file_format) vs. [NES 2.0](https://www.nesdev.org/wiki/NES_2.0)).  This will be important as we need to know the structure of the ROM to hack at it.  We will find out in a bit that that this ROM _will be in the NES 2.0 format_ so we will ignore the iNES format in what follows.
+
+To inspect the ROM file's values we can use any hex editor:  [Bizhawk](https://tasvideos.org/Bizhawk) comes with one, or [ImHex](https://github.com/WerWolv/ImHex) is a great choice for a stand-alone hex editor.
+
+The 16 byte header of this ROM file (from 00 to 0F) is:
 
 ```text
 4E 45 53 1A 08 10 12 08 00 00 70 00 00 00 00 01
 ```
-Corresponding to the following:
 
-Byte|Description
---|--
-00| Constant $4E ("N")
-01|  Constant $45 ("E")
-02|  Constant $53 ("S")
-03|  Constant 
+Corresponding to the following (with much more information [here](https://www.nesdev.org/wiki/NES_2.0#File_Structure)):
+
+| Byte | Value                           | Description                                |
+| ---- | ------------------------------- | ------------------------------------------ |
+| 00   | 4E                              | ASCII "N"                                  |
+| 01   | 45                              | ASCII "E"                                  |
+| 02   | 53                              | ASCII "S"                                  |
+| 03   | 1A                              | ASCII SUB / MS-DOS EOF[^1]                 |
+| 04   | $hex(08) = 8$                   | Least Significant Bit of PRG-ROM.          |
+| 05   | $hex(10) = 16$                  | Least Significant Bit of CHR-ROM.          |
+| 06   | $hex(12) = 18 = bin(00010010)$  | Flags.  See Below.                         |
+| 07   | $hex(08) = 8 = bin(00001010)$   | Flags.  See Below.                         |
+| 08   | 0                               | Most Significant Bit of Mapper.            |
+| 09   | 0                               | Most Significant Bit of PRG-ROM/CHR-ROM.   |
+| 0A   | $hex(70) = 112 = bin(01110000)$ | PRG-RAM size --- in a weird way.           |
+| 0B   | 0                               | CHR-RAM size.  (Seems to say: no CHR-RAM.) |
+| 0C   | 0                               | CPU/PPU Timing flag. ("NTSC NES")          |
+| 0D   | 0                               | (We don't care about this one.)            |
+| 0E   | 0                               | (We don't care about this one.)            |
+| 0F   | $hex(01) = 1$                   | Uses Standard NES controllers.             |
+
+Some things to take away from this:
+
+- **QUESTION?** I'm not sure how to read 04, 05, 09** together.  I think it's something like: there's \$0x0008 and \$0x0010 KiBs for PRG and CHR respectively, but I'm not sure.  That doesn't quite make sense.  Even assuming it's 16 times that number, it's pretty low but that might be it.
+  
+- Note the address \$06 above.  Check this flag out here[here](https://www.nesdev.org/wiki/NES_2.0#File_Structure), which we reproduce below for convenience.  The binary is $00010010$ which gives us: "Mapper Number D0" (**QUESTION: WHAT IS THIS**) and "Battery" present.  Indeed, there was a battery with this game.
+  
+```text
+# FLAG $06
+
+D~7654 3210
+  ---------
+  NNNN FTBM
+  |||| |||+-- Hard-wired nametable layout
+  |||| |||     0: Vertical arrangement ("mirrored horizontally") or mapper-controlled
+  |||| |||     1: Horizontal arrangement ("mirrored vertically")
+  |||| ||+--- "Battery" and other non-volatile memory
+  |||| ||      0: Not present
+  |||| ||      1: Present
+  |||| |+--- 512-byte Trainer
+  |||| |      0: Not present
+  |||| |      1: Present between Header and PRG-ROM data
+  |||| +---- Alternative nametables
+  ||||        0: No
+  ||||        1: Yes
+  ++++------ Mapper Number D3..D0
+```
+
+- Similarly, for \$07, we have the binary value $00001010$.  The flag map is reproduced below from the same resource as above.  Given this, we know that the console was the NES (as expected) and that, indeed, this is an NES 2.0 Heading.  This is how we knew the game was in the NES 2.0 Format.
+
+```text
+# FLAG $07
+
+D~7654 3210
+  ---------
+  NNNN 10TT
+  |||| ||++- Console type
+  |||| ||     0: Nintendo Entertainment System/Family Computer
+  |||| ||     1: Nintendo Vs. System
+  |||| ||     2: Nintendo Playchoice 10
+  |||| ||     3: Extended Console Type
+  |||| ++--- NES 2.0 identifier
+  ++++------ Mapper Number D7..D4
+```
+
+- The other values may come up later but, for now, this seems reasonable and gives us enough to be confident about diving into the cart.
+
+[^1]: [SUB as MS-DOS End of File](https://en.wikipedia.org/wiki/Substitute_character#End_of_file).

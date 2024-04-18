@@ -1,0 +1,152 @@
+[
+  {
+    "objectID": "reference/definitions.html",
+    "href": "reference/definitions.html",
+    "title": "General Definitions",
+    "section": "",
+    "text": "See also the glossery here. Most quoted material below is from this page. These will be the most relevant items for this project.\n\n\n\nGame Pak:\n\nA Nintendo cartridge (including all the circuits and stuff).\n\nASIC:\n\n“Application specific integrated circuit. Used with mappers involving complicated logic that the IC chip is made specific to this purpose.”\n\nMMC1:\n\n“Name for ASIC mappers made by Nintendo.”\n\n\n\n\n\n\nROM:\n\nRead-Only Memory. Can only be read, not written to.\n\nPRG ROM:\n\nTypically contains the game’s “programming”.\n\nThe number following the acronym is the release number, starting with 0.\n“ROM on the CPU’s bus, containing a program to be executed and data for the program to use. In games using CHR RAM, it may also contain data to be copied to CHR RAM.”\n\nCHR ROM (“Character” ROM?)\n\nROM which contains the graphics and visual assets (sprites, backgrounds, etc.).\n\nThe number following the acronym is the release number, starting with 0.\n“ROM in the cartridge which is connected to the PPU, normally mapped at $0000-$1FFF and holding pattern tables.”\n\n\n\n\n\n\nRAM:\n\nRandom Access Memory. Can be read or written to.\n\nRPG RAM:\n\nTypically contains the game’s “programming”.\n\nThe number following the acronym is the release number, starting with 0.\n“RAM in the cartridge on the CPU bus, in contrast to the internal RAM at $0000-$07FF which is usually called main RAM, system RAM, or just RAM.”\n\nCHR RAM (“Character” RAM?):\n\nRAM which contains the graphics and visual assets (sprites, backgrounds, etc.).\n\nThe number following the acronym is the release number, starting with 0.”\n“An SRAM on the cartridge, usually 8192 bytes, normally mapped at $0000-$1FFF and holding pattern tables.”\n\nSRAM:\n\n“Static Ram”.\n\nRAM type that uses “latching circuitry” to store each bit. When the power is removed from the RAM, the data is lost.\n\nSome more details at this post.\n\nWRAM:\n\n(“Work RAM”) Typically PRG RAM used for (???).\n\nVRAM:\n\nVideo RAM (pattern tables, nametables, attribute tables, palettes).\n\n\n\n\n\n\nMapper:\n\nCircuits on the Game Pak to perform address decoding and couting.\n\niNES Mapper:\n\n????\n\nMirroring:\n\n“Presence of one memory area at more than one place in the memory map.”\n“In the PPU memory, mirroring is used in the nametables to repeat the screen horizontally or vertically, thus the distinguishing terms”horizontal mirroring” and “vertical mirroring” are used.”\n\n\n\n\n\n\niNES Format:\n\n“The de facto standard for distribution of NES binary programs.”\n“The format was later extended with NES 2.0 to fix the shortcomings of iNES.”\nSee this page for details.\n\nNES 2.0 Format:\n\nThe format which improved upon the iNES Format.\nSee this page for details.",
+    "crumbs": [
+      "Reference",
+      "General Definitions"
+    ]
+  },
+  {
+    "objectID": "reference/definitions.html#nes-circuitry-sundry",
+    "href": "reference/definitions.html#nes-circuitry-sundry",
+    "title": "General Definitions",
+    "section": "",
+    "text": "Game Pak:\n\nA Nintendo cartridge (including all the circuits and stuff).\n\nASIC:\n\n“Application specific integrated circuit. Used with mappers involving complicated logic that the IC chip is made specific to this purpose.”\n\nMMC1:\n\n“Name for ASIC mappers made by Nintendo.”",
+    "crumbs": [
+      "Reference",
+      "General Definitions"
+    ]
+  },
+  {
+    "objectID": "reference/definitions.html#roms",
+    "href": "reference/definitions.html#roms",
+    "title": "General Definitions",
+    "section": "",
+    "text": "ROM:\n\nRead-Only Memory. Can only be read, not written to.\n\nPRG ROM:\n\nTypically contains the game’s “programming”.\n\nThe number following the acronym is the release number, starting with 0.\n“ROM on the CPU’s bus, containing a program to be executed and data for the program to use. In games using CHR RAM, it may also contain data to be copied to CHR RAM.”\n\nCHR ROM (“Character” ROM?)\n\nROM which contains the graphics and visual assets (sprites, backgrounds, etc.).\n\nThe number following the acronym is the release number, starting with 0.\n“ROM in the cartridge which is connected to the PPU, normally mapped at $0000-$1FFF and holding pattern tables.”",
+    "crumbs": [
+      "Reference",
+      "General Definitions"
+    ]
+  },
+  {
+    "objectID": "reference/definitions.html#rams",
+    "href": "reference/definitions.html#rams",
+    "title": "General Definitions",
+    "section": "",
+    "text": "RAM:\n\nRandom Access Memory. Can be read or written to.\n\nRPG RAM:\n\nTypically contains the game’s “programming”.\n\nThe number following the acronym is the release number, starting with 0.\n“RAM in the cartridge on the CPU bus, in contrast to the internal RAM at $0000-$07FF which is usually called main RAM, system RAM, or just RAM.”\n\nCHR RAM (“Character” RAM?):\n\nRAM which contains the graphics and visual assets (sprites, backgrounds, etc.).\n\nThe number following the acronym is the release number, starting with 0.”\n“An SRAM on the cartridge, usually 8192 bytes, normally mapped at $0000-$1FFF and holding pattern tables.”\n\nSRAM:\n\n“Static Ram”.\n\nRAM type that uses “latching circuitry” to store each bit. When the power is removed from the RAM, the data is lost.\n\nSome more details at this post.\n\nWRAM:\n\n(“Work RAM”) Typically PRG RAM used for (???).\n\nVRAM:\n\nVideo RAM (pattern tables, nametables, attribute tables, palettes).",
+    "crumbs": [
+      "Reference",
+      "General Definitions"
+    ]
+  },
+  {
+    "objectID": "reference/definitions.html#memory-mapping-and-mirroring",
+    "href": "reference/definitions.html#memory-mapping-and-mirroring",
+    "title": "General Definitions",
+    "section": "",
+    "text": "Mapper:\n\nCircuits on the Game Pak to perform address decoding and couting.\n\niNES Mapper:\n\n????\n\nMirroring:\n\n“Presence of one memory area at more than one place in the memory map.”\n“In the PPU memory, mirroring is used in the nametables to repeat the screen horizontally or vertically, thus the distinguishing terms”horizontal mirroring” and “vertical mirroring” are used.”",
+    "crumbs": [
+      "Reference",
+      "General Definitions"
+    ]
+  },
+  {
+    "objectID": "reference/definitions.html#emulation",
+    "href": "reference/definitions.html#emulation",
+    "title": "General Definitions",
+    "section": "",
+    "text": "iNES Format:\n\n“The de facto standard for distribution of NES binary programs.”\n“The format was later extended with NES 2.0 to fix the shortcomings of iNES.”\nSee this page for details.\n\nNES 2.0 Format:\n\nThe format which improved upon the iNES Format.\nSee this page for details.",
+    "crumbs": [
+      "Reference",
+      "General Definitions"
+    ]
+  },
+  {
+    "objectID": "reference/utilities_and_resources.html",
+    "href": "reference/utilities_and_resources.html",
+    "title": "Utilities and Resources",
+    "section": "",
+    "text": "NESDev’s NES 2.0 File Structure Description: The definitive place to find information about the NES 2.0 format.\nNESSplitter: Splits a ROM into PNG and CHR ROM segments.",
+    "crumbs": [
+      "Reference",
+      "Utilities and Resources"
+    ]
+  },
+  {
+    "objectID": "reference/utilities_and_resources.html#nes-binary-file-utils-resources",
+    "href": "reference/utilities_and_resources.html#nes-binary-file-utils-resources",
+    "title": "Utilities and Resources",
+    "section": "",
+    "text": "NESDev’s NES 2.0 File Structure Description: The definitive place to find information about the NES 2.0 format.\nNESSplitter: Splits a ROM into PNG and CHR ROM segments.",
+    "crumbs": [
+      "Reference",
+      "Utilities and Resources"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dungeon Master: Gift of the Magi Documentation",
+    "section": "",
+    "text": "Check the sidebar for more information."
+  },
+  {
+    "objectID": "reference/cart_data.html",
+    "href": "reference/cart_data.html",
+    "title": "Cartridge and Emulation Binary Data",
+    "section": "",
+    "text": "This data was distilled from nescartdb, an excellent cart resource.\nNote: I’m unsure what parts of this will be useful. We’ll see.\n\n\n\nReleased in USA in 1990 (in Japan in 1989).\n\n\n\n\nPRG0 (NES-09-0 PRG) 128 KB\nCHR0 (NES-09-O CHR) 128 KB\n\n\n\n\nThis may be less important but useful for searching.\n\nNES-SKROM-04 (Nintendo Produced, November 1990 First Run).\niNES Mapper: 1 (???)\nMirroring: Mapper Ctrl\nBattery: Yes\nWRAM: 8 KB\nVRAM: 0 KB\n\n\n\n\n\nU1 PRG (NEC) Mask ROM 128 KB (200 ns)\nU2 CHR (NEC) Mask ROM 128 KB (200 ns)\nU3 CIC\nU4 MMC1 (NEC) MMC1B2\n\n\n\n\n\n\n\nThe file we will be using is Dungeon Magic - Sword of the Elements (USA).nes. Going forward, we will refer to this file as the “ROM”.\nTo check that the file is correct, run the following checksum calculation commands in terminal (using the actual path instead of /location/of/rom.nes when using the commands):\n# MD5 Checksum.\n&gt; md5sum /location/of/rom.nes\n90c6e21b079795f5c9905142f34c56b6\n\n# SHA1 Checksum.\n&gt; sha1sum /location/of/rom.nes\n0f8e5f97e23f1209f08cbd27c1c58ea585f0c3b1\n\n# CRC32 Checksum.  \n# On Debian, may need to be installed.\n&gt; crc32 /location/of/rom.nes\n1fedecae\n(Note that we cannot help you find this ROM, but searching for the exact name above could be a good start.)\n\n\n\n\nThe ROM header will let us see what kind of file format this is (iNES vs. NES 2.0). This will be important as we need to know the structure of the ROM to hack at it. We will find out in a bit that that this ROM will be in the NES 2.0 format so we will ignore the iNES format in what follows.\nTo inspect the ROM file’s values we can use any hex editor: Bizhawk comes with one, or ImHex is a great choice for a stand-alone hex editor.\nThe 16 byte header of this ROM file (from 00 to 0F) is:\n4E 45 53 1A 08 10 12 08 00 00 70 00 00 00 00 01\nCorresponding to the following (with much more information here):\n\n\n\nByte\nValue\nDescription\n\n\n\n\n00\n4E\nASCII “N”\n\n\n01\n45\nASCII “E”\n\n\n02\n53\nASCII “S”\n\n\n03\n1A\nASCII SUB / MS-DOS EOF1\n\n\n04\n\\(hex(08) = 8\\)\nLeast Significant Bit of PRG-ROM.\n\n\n05\n\\(hex(10) = 16\\)\nLeast Significant Bit of CHR-ROM.\n\n\n06\n\\(hex(12) = 18 = bin(00010010)\\)\nFlags. See Below.\n\n\n07\n\\(hex(08) = 8 = bin(00001010)\\)\nFlags. See Below.\n\n\n08\n0\nMost Significant Bit of Mapper.\n\n\n09\n0\nMost Significant Bit of PRG-ROM/CHR-ROM.\n\n\n0A\n\\(hex(70) = 112 = bin(01110000)\\)\nPRG-RAM size — in a weird way.\n\n\n0B\n0\nCHR-RAM size. (Seems to say: no CHR-RAM.)\n\n\n0C\n0\nCPU/PPU Timing flag. (“NTSC NES”)\n\n\n0D\n0\n(We don’t care about this one.)\n\n\n0E\n0\n(We don’t care about this one.)\n\n\n0F\n\\(hex(01) = 1\\)\nUses Standard NES controllers.\n\n\n\nSome things to take away from this:\n\nFor PRG-ROM there are 8 ($04) chunks of 16KiB each. (QUESTIONS: WHERE DOES THE 8KiB COME FROM?)\nFOR CHR-ROM there are 16 ($05) chunks of 8KiB each. (QUESTIONS: WHERE DOES THE 8KiB COME FROM?)\nNote the address $06 above. Check this flag out herehere, which we reproduce below for convenience. The binary is \\(00010010\\) which gives us: “Mapper Number D0” (QUESTION: WHAT IS THIS), “Mirrored Horizontally”, and “Battery” is present. Indeed, there was a battery with this game.\n\n# FLAG $06\n\nD~7654 3210\n  ---------\n  NNNN FTBM\n  |||| |||+-- Hard-wired nametable layout\n  |||| |||     0: Vertical arrangement (\"mirrored horizontally\") or mapper-controlled\n  |||| |||     1: Horizontal arrangement (\"mirrored vertically\")\n  |||| ||+--- \"Battery\" and other non-volatile memory\n  |||| ||      0: Not present\n  |||| ||      1: Present\n  |||| |+--- 512-byte Trainer\n  |||| |      0: Not present\n  |||| |      1: Present between Header and PRG-ROM data\n  |||| +---- Alternative nametables\n  ||||        0: No\n  ||||        1: Yes\n  ++++------ Mapper Number D3..D0\n\nSimilarly, for $07, we have the binary value \\(00001010\\). The flag map is reproduced below from the same resource as above. Given this, we know that the console was the NES (as expected) and that, indeed, this is an NES 2.0 Heading. This is how we knew the game was in the NES 2.0 Format.\nRemember the 512-byte trainer is not present. We will need this soon.\n\n# FLAG $07\n\nD~7654 3210\n  ---------\n  NNNN 10TT\n  |||| ||++- Console type\n  |||| ||     0: Nintendo Entertainment System/Family Computer\n  |||| ||     1: Nintendo Vs. System\n  |||| ||     2: Nintendo Playchoice 10\n  |||| ||     3: Extended Console Type\n  |||| ++--- NES 2.0 identifier\n  ++++------ Mapper Number D7..D4\n\nThe other values may come up later but, for now, this seems reasonable and gives us enough to be confident about diving into the cart.",
+    "crumbs": [
+      "Reference",
+      "Cartridge and Emulation Binary Data"
+    ]
+  },
+  {
+    "objectID": "reference/cart_data.html#cart-details",
+    "href": "reference/cart_data.html#cart-details",
+    "title": "Cartridge and Emulation Binary Data",
+    "section": "",
+    "text": "Released in USA in 1990 (in Japan in 1989).\n\n\n\n\nPRG0 (NES-09-0 PRG) 128 KB\nCHR0 (NES-09-O CHR) 128 KB\n\n\n\n\nThis may be less important but useful for searching.\n\nNES-SKROM-04 (Nintendo Produced, November 1990 First Run).\niNES Mapper: 1 (???)\nMirroring: Mapper Ctrl\nBattery: Yes\nWRAM: 8 KB\nVRAM: 0 KB\n\n\n\n\n\nU1 PRG (NEC) Mask ROM 128 KB (200 ns)\nU2 CHR (NEC) Mask ROM 128 KB (200 ns)\nU3 CIC\nU4 MMC1 (NEC) MMC1B2",
+    "crumbs": [
+      "Reference",
+      "Cartridge and Emulation Binary Data"
+    ]
+  },
+  {
+    "objectID": "reference/cart_data.html#emulation-binary",
+    "href": "reference/cart_data.html#emulation-binary",
+    "title": "Cartridge and Emulation Binary Data",
+    "section": "",
+    "text": "The file we will be using is Dungeon Magic - Sword of the Elements (USA).nes. Going forward, we will refer to this file as the “ROM”.\nTo check that the file is correct, run the following checksum calculation commands in terminal (using the actual path instead of /location/of/rom.nes when using the commands):\n# MD5 Checksum.\n&gt; md5sum /location/of/rom.nes\n90c6e21b079795f5c9905142f34c56b6\n\n# SHA1 Checksum.\n&gt; sha1sum /location/of/rom.nes\n0f8e5f97e23f1209f08cbd27c1c58ea585f0c3b1\n\n# CRC32 Checksum.  \n# On Debian, may need to be installed.\n&gt; crc32 /location/of/rom.nes\n1fedecae\n(Note that we cannot help you find this ROM, but searching for the exact name above could be a good start.)",
+    "crumbs": [
+      "Reference",
+      "Cartridge and Emulation Binary Data"
+    ]
+  },
+  {
+    "objectID": "reference/cart_data.html#the-rom-header",
+    "href": "reference/cart_data.html#the-rom-header",
+    "title": "Cartridge and Emulation Binary Data",
+    "section": "",
+    "text": "The ROM header will let us see what kind of file format this is (iNES vs. NES 2.0). This will be important as we need to know the structure of the ROM to hack at it. We will find out in a bit that that this ROM will be in the NES 2.0 format so we will ignore the iNES format in what follows.\nTo inspect the ROM file’s values we can use any hex editor: Bizhawk comes with one, or ImHex is a great choice for a stand-alone hex editor.\nThe 16 byte header of this ROM file (from 00 to 0F) is:\n4E 45 53 1A 08 10 12 08 00 00 70 00 00 00 00 01\nCorresponding to the following (with much more information here):\n\n\n\nByte\nValue\nDescription\n\n\n\n\n00\n4E\nASCII “N”\n\n\n01\n45\nASCII “E”\n\n\n02\n53\nASCII “S”\n\n\n03\n1A\nASCII SUB / MS-DOS EOF1\n\n\n04\n\\(hex(08) = 8\\)\nLeast Significant Bit of PRG-ROM.\n\n\n05\n\\(hex(10) = 16\\)\nLeast Significant Bit of CHR-ROM.\n\n\n06\n\\(hex(12) = 18 = bin(00010010)\\)\nFlags. See Below.\n\n\n07\n\\(hex(08) = 8 = bin(00001010)\\)\nFlags. See Below.\n\n\n08\n0\nMost Significant Bit of Mapper.\n\n\n09\n0\nMost Significant Bit of PRG-ROM/CHR-ROM.\n\n\n0A\n\\(hex(70) = 112 = bin(01110000)\\)\nPRG-RAM size — in a weird way.\n\n\n0B\n0\nCHR-RAM size. (Seems to say: no CHR-RAM.)\n\n\n0C\n0\nCPU/PPU Timing flag. (“NTSC NES”)\n\n\n0D\n0\n(We don’t care about this one.)\n\n\n0E\n0\n(We don’t care about this one.)\n\n\n0F\n\\(hex(01) = 1\\)\nUses Standard NES controllers.\n\n\n\nSome things to take away from this:\n\nFor PRG-ROM there are 8 ($04) chunks of 16KiB each. (QUESTIONS: WHERE DOES THE 8KiB COME FROM?)\nFOR CHR-ROM there are 16 ($05) chunks of 8KiB each. (QUESTIONS: WHERE DOES THE 8KiB COME FROM?)\nNote the address $06 above. Check this flag out herehere, which we reproduce below for convenience. The binary is \\(00010010\\) which gives us: “Mapper Number D0” (QUESTION: WHAT IS THIS), “Mirrored Horizontally”, and “Battery” is present. Indeed, there was a battery with this game.\n\n# FLAG $06\n\nD~7654 3210\n  ---------\n  NNNN FTBM\n  |||| |||+-- Hard-wired nametable layout\n  |||| |||     0: Vertical arrangement (\"mirrored horizontally\") or mapper-controlled\n  |||| |||     1: Horizontal arrangement (\"mirrored vertically\")\n  |||| ||+--- \"Battery\" and other non-volatile memory\n  |||| ||      0: Not present\n  |||| ||      1: Present\n  |||| |+--- 512-byte Trainer\n  |||| |      0: Not present\n  |||| |      1: Present between Header and PRG-ROM data\n  |||| +---- Alternative nametables\n  ||||        0: No\n  ||||        1: Yes\n  ++++------ Mapper Number D3..D0\n\nSimilarly, for $07, we have the binary value \\(00001010\\). The flag map is reproduced below from the same resource as above. Given this, we know that the console was the NES (as expected) and that, indeed, this is an NES 2.0 Heading. This is how we knew the game was in the NES 2.0 Format.\nRemember the 512-byte trainer is not present. We will need this soon.\n\n# FLAG $07\n\nD~7654 3210\n  ---------\n  NNNN 10TT\n  |||| ||++- Console type\n  |||| ||     0: Nintendo Entertainment System/Family Computer\n  |||| ||     1: Nintendo Vs. System\n  |||| ||     2: Nintendo Playchoice 10\n  |||| ||     3: Extended Console Type\n  |||| ++--- NES 2.0 identifier\n  ++++------ Mapper Number D7..D4\n\nThe other values may come up later but, for now, this seems reasonable and gives us enough to be confident about diving into the cart.",
+    "crumbs": [
+      "Reference",
+      "Cartridge and Emulation Binary Data"
+    ]
+  },
+  {
+    "objectID": "reference/cart_data.html#footnotes",
+    "href": "reference/cart_data.html#footnotes",
+    "title": "Cartridge and Emulation Binary Data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSUB as MS-DOS End of File.↩︎",
+    "crumbs": [
+      "Reference",
+      "Cartridge and Emulation Binary Data"
+    ]
+  }
+]

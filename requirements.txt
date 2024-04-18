@@ -1,4 +1,0 @@
-faker~=24.1
-ipykernel~=6.29
-numpy~=1.26
-python-dotenv~=1.0
